@@ -1,0 +1,38 @@
+{
+  "name": "@forceswap/default-token-list",
+  "version": "0.0.1",
+  "description": "◦ The Forceswap default token list",
+  "main": "build/forceswap-default.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir -p build && node src/write.js > build/forceswap-default.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/forceswap-default.tokenlist.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forceswap/default-token-list"
+  },
+  "keywords": [
+    "forceswap",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "Netixsol",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Forceswap/default-token-list/issues"
+  },
+  "homepage": "https://github.com/Forceswap/default-token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@forceswap/token-lists": "0.0.3",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  }
+}
